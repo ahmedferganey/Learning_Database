@@ -1,7 +1,7 @@
 ####
 docker run --rm -it -v $(pwd)/databases:/usr/databases ubuntu:latest bash
 
-#docker run --rm -it -v /media/ahmed-ferganey/AI1/02_Learning_DataScience/MyGithubDB/Learning_Database/MYDB/SQL/databases:/usr/databases ubuntu:latest bash
+#docker run --rm -it -v /media/ahmed-ferganey/AI1/02_Learning_DataScience/MyGithubDB/Learning_Database/MYDatabase/SQL_SAMY/databases:/usr/databases ubuntu:latest bash
 
 
 # Install MySQL from root user
@@ -14,11 +14,13 @@ service mysql start # or  'systemctl start mysql' if systemd is installed
 mysql 
 # To allow remote connections from root user to mysql server
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'P@ssw0rd';
+        # mysql -u root -pP@ssw0rd
+
 
 # to list the current databases
 SHOW DATABASES;
 
-# to check the folder where the databases are stored
+# to check the folder where the databases are stored by default on mysql
 SHOW VARIABLES WHERE Variable_name = 'datadir';
 
 # to create a database called testdb
@@ -59,5 +61,7 @@ cd sql
 
 # Use Docker
 docker run -d -v /var/run/docker.sock:/tmp/docker.sock -v /etc/hosts:/tmp/hosts asami76/docker-hoster
+
+
 
 docker-compose -f mysql.yml up -d 
