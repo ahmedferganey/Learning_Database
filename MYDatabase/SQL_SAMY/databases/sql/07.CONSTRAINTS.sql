@@ -1,4 +1,4 @@
--- Active: 1687117690530@@mysql-db@3306@testdb
+-- Active: 1721232311184@@mysql-db@3306@testdb
 show databases;
 
 DROP DATABASE IF EXISTS testdb;
@@ -53,6 +53,7 @@ DESC t4;
 INSERT INTO t4 (first_name) VALUES ('ahmed');
 TABLE t4;
 INSERT INTO t4 (first_name) VALUES ('sami'), ('aya');
+TABLE t4;
 
 -- insert a row with id
 INSERT INTO t4 VALUES (10, 'ali');

@@ -1,3 +1,4 @@
+-- Active: 1721232311184@@mysql-db@3306@testdb
 -- stored procedure
 -- functions
 -- triggers
@@ -24,7 +25,7 @@ BEGIN
     RETURN v_age;
 END;
 
-SELECT fnAge('1990-01-01');
+SELECT fnAge('1998-07-01');
 
 -- A function to calculate the area of a circle
 DELIMITER $$

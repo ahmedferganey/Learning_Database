@@ -49,6 +49,7 @@ SELECT 'Hello, SQL' LIKE 'Hello, SQL';
 
 SELECT 'Hello, SQL' LIKE 'Hello, %';
 
+SELECT 'Hello, SQL' LIKE 'Hello,%l';
 
 
 -- charactersets and collations
@@ -127,6 +128,10 @@ SELECT actor_id, first_name FROM actor LIMIT 5;
 SELECT actor_id, first_name FROM actor LIMIT 5, 10;
 SELECT actor_id, first_name, 'dummy text' FROM actor LIMIT 5;
 SELECT actor_id, first_name, curdate() FROM actor LIMIT 5;
+SELECT actor_id, concat(last_name, ', ' ,first_name), last_update FROM actor LIMIT 5;
+SELECT actor_id, concat(last_name, ', ' ,first_name), last_update, Monthname(last_update) FROM actor LIMIT 5;
+
+
 SELECT actor_id, first_name, last_update FROM actor LIMIT 5;
 SELECT * FROM actor;
 
