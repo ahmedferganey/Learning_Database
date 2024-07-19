@@ -1,4 +1,4 @@
--- Active: 1688525394700@@pg-db@5432@testdb
+-- Active: 1721380832893@@pg-db@5432@postgres
 SELECT version();
 
 SHOW server_version;

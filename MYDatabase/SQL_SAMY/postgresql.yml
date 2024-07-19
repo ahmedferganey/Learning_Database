@@ -39,7 +39,7 @@ services:
     hostname: pgadmin
     container_name: pgadmin
     environment:
-      PGADMIN_DEFAULT_EMAIL: "ahmed.samy@gmail.com"
+      PGADMIN_DEFAULT_EMAIL: "ahmed.ferganey707@gmail.com"
       PGADMIN_DEFAULT_PASSWORD: "P@ssw0rd"
     volumes:
       - ./databases:/usr/databases
